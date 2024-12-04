@@ -13,7 +13,7 @@
 
 	<artifactId>demosdk</artifactId>
 	<groupId>io.mosip.demosdk</groupId>
-	<version>1.2.1-java21-SNAPSHOT</version>
+	<version>1.2.1-SNAPSHOT</version>
 	<name>demosdk-client</name>
 
 	<description>Sample implementation of demo SDK client</description>
@@ -62,11 +62,10 @@
 		<maven.compiler.target>21</maven.compiler.target>
 		<jacoco.maven.plugin.version>0.8.11</jacoco.maven.plugin.version>
 
-
 		<!-- Kernel -->
-		<kernel.logger.logback.version>1.2.1-java21-SNAPSHOT</kernel.logger.logback.version>
-		<kernel.core.version>1.2.1-java21-SNAPSHOT</kernel.core.version>
-		
+		<kernel.logger.logback.version>1.2.1-SNAPSHOT</kernel.logger.logback.version>
+		<kernel.core.version>1.2.1-SNAPSHOT</kernel.core.version>
+		<kerne-bom.version>1.2.1-SNAPSHOT</kerne-bom.version>
 		
 	</properties>
 	
@@ -75,7 +74,7 @@
 			<dependency>
 				<groupId>io.mosip.kernel</groupId>
 				<artifactId>kernel-bom</artifactId>
-				<version>1.2.1-java21-SNAPSHOT</version>
+				<version>${kerne-bom.version}</version>
 				<type>pom</type>
 			    <scope>import</scope>
 			</dependency>
@@ -229,8 +228,8 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>${maven.compiler.version}</version>
 				<configuration>
-					<source>11</source>
-					<target>11</target>
+					<source>${maven.compiler.source}</source>
+					<target>${maven.compiler.target}</target>
 				</configuration>
 			</plugin>
 
